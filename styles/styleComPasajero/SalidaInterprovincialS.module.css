@@ -1,0 +1,131 @@
+.cajaSalidaInterprovincial{
+
+width: 360px;
+height: 140px;
+display: grid;
+grid-template-rows: 1fr 4fr;
+margin: 10px 0 10px 0;
+border: solid 0.5px rgb(150, 150, 150);
+  border-radius:5px;
+   box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.4);
+}
+
+
+/* inicio de la caja de flex box */
+
+.tituloSalidaInterprovicial{
+
+    background-color:rgb(41, 41, 41);
+    border-radius:5px 5px 0em 0em;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(170, 170, 170);
+
+
+}
+
+
+
+.salidaProvincia{
+    background-color:rgb(77, 77, 77);
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+
+}
+
+/* final de la caja de flex box */
+
+
+
+.salidaProvincia01{
+background-color: white;
+border-radius: 5px;
+border: solid black 1px;
+width: 100px;
+height: 50px;
+
+text-align: center;
+box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.7);
+
+}
+
+
+
+.salidaProvincia02{
+    background-color:blueviolet;
+
+    border-radius: 5px;
+    border: solid white 1px;
+  
+
+    width: 100px;
+    height: 50px;
+    font-size: 13px;
+
+    text-align: center;
+    box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.7);
+
+}
+
+@media (max-width: 600px) {
+.cajaSalidaInterprovincial{
+
+width: 90%;
+height: 80px;
+border: solid 0.2px rgb(150, 150, 150);
+}
+
+
+/* inicio de la caja de flex box */
+
+.tituloSalidaInterprovicial{
+
+    background-color:rgb(41, 41, 41);
+    border-radius:5px 5px 0em 0em;
+    box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.7);
+
+    font-size: 12px;
+
+
+}
+
+/* final de la caja de flex box */
+
+
+
+.salidaProvincia01{
+
+
+width: 80px;
+height: 40px;
+font-size: 12px;
+
+
+}
+
+
+
+.salidaProvincia02{
+  
+width: 80px;
+height: 40px;
+font-size: 12px;
+
+    text-align: center;
+  
+
+}
+
+
+
+
+
+}

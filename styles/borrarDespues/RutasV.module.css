@@ -1,0 +1,89 @@
+.cajaRutas{
+  background-color: rgb(238, 238, 238);
+  width: 100%;
+  height: 30px;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: 1fr 3fr 0.5fr;
+  border-radius: 5px;
+
+
+}
+
+
+.cajaViajes{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: royalblue;
+
+}
+
+.cajaDestino{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: rgb(104, 104, 104);
+  font-weight: 600;
+  font-size: 16px;
+}
+.cajaVer{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: rgb(87, 65, 40);
+font-weight: 600;
+}
+
+.cajaDestinoBorde{
+background-color: rgb(155, 155, 155);
+padding: 0 5px;
+border-radius: 5px;
+}
+
+
+
+@media (max-width: 600px) {
+
+.cajaRutas{
+
+  width: 100%;
+  height: 25px;
+  gap: 1px;
+
+
+
+}
+
+
+.cajaViajes{
+
+
+  font-size: 11px;
+background-color: royalblue;
+
+}
+
+.cajaDestino{
+
+background-color: rgb(144, 150, 168);
+  font-weight: 600;
+  font-size: 11px;
+}
+.cajaVer{
+  font-weight: 600;
+  font-size: 11px;
+background-color: rgb(87, 65, 40);
+}
+
+.cajaDestinoBorde{
+background-color: rgb(107, 107, 107);
+padding: 0 5px;
+border-radius: 3px;
+}
+
+
+} 
