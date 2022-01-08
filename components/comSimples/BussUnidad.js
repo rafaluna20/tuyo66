@@ -1,11 +1,19 @@
+import Image from "next/image";
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
+
+import {es} from "date-fns/locale"
 
 
+function BussUnidad({producto}) {
 
-function BussUnidad() {
+
+  const { id, comentarios,creado,descripcion,empresa,nombre,url,urlimagen,votos}= producto;
+
   return (
 
 
     <div className="caja-buss-unidad">
+
 
       <div className="caja-buss-unidad-izquierdo">
 
@@ -13,12 +21,12 @@ function BussUnidad() {
 
           <div className="caja-buss-unidad-izquierdo-s12">
             <div className="caja-buss-unidad-izquierdo-s12-1">EMPRESA:</div>
-            <div className="descripcion">antezana</div>
+            <div className="descripcion">{empresa}</div>
           </div>
 
           <div className="caja-buss-unidad-izquierdo-s12">
-            <div className="caja-buss-unidad-izquierdo-s12-1">CARRO:</div>
-            <div className="descripcion">toyota corolla mnj-125</div>
+            <div className="caja-buss-unidad-izquierdo-s12-1">NOMBRE:</div>
+            <div className="descripcion">{nombre}</div>
           </div>
 
           <div className="caja-buss-unidad-izquierdo-s12">
@@ -27,8 +35,8 @@ function BussUnidad() {
           </div>
 
           <div className="caja-buss-unidad-izquierdo-s12">
-            <div className="caja-buss-unidad-izquierdo-s12-1">HORA CONFIRMADA:</div>
-            <div className="descripcion">5:30PM</div>
+            <div className="caja-buss-unidad-izquierdo-s12-1">publicado hace:</div>
+            <div className="descripcion">{formatDistanceToNow(new Date(creado),{locale:es}) }</div>
           </div>
 
         </div>
@@ -36,8 +44,19 @@ function BussUnidad() {
 
 
         <div className="caja-buss-unidad-izquierdo-i">
-          <div> TIEMPO </div>
-          <div>  5h:30min:02s </div>
+        <div>
+            <div style={{  textAlign:"center",}}> tiempo </div>
+            <div style={{ textAlign: "center", }}>  5h:30min:02s </div>
+        </div>
+          <div>
+            <div style={{ textAlign: "center", }}> votos </div>
+            <div style={{ textAlign: "center", }}>  {votos} </div>
+          </div>
+          <div>
+            <div style={{ textAlign: "center", }}> comentarios </div>
+            <div style={{ textAlign: "center", }}>{comentarios.length}</div>
+          </div>
+
         </div>
 
 
@@ -47,7 +66,9 @@ function BussUnidad() {
 
       <div className="caja-buss-unidad-derecho">
 
-        <span className="caja-buss-unidad-derecho-s"></span>
+        <span className="caja-buss-unidad-derecho-s">
+          <img src={urlimagen} alt="imagen de carro"/>
+        </span>
 
         <div className="caja-buss-unidad-derecho-i">
 
@@ -60,6 +81,13 @@ function BussUnidad() {
       </div>
 
 <style jsx>{`
+
+
+img{
+width: 90px;
+
+}
+
 .caja-buss-unidad{
  background-color:white;
 margin: 5px 10px 5px 10px;
@@ -156,7 +184,8 @@ font-weight: bold;
     background-color: rgb(27, 27, 27);
 border-radius: 8px;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
+  justify-content: space-evenly;
    align-items: center;
    color: white;
    font-weight: bolder;
@@ -178,6 +207,13 @@ border-radius: 8px;
 }
 
 @media (max-width: 600px) {
+
+img{
+width: 50px;
+
+}
+
+
 .caja-buss-unidad{
 
 

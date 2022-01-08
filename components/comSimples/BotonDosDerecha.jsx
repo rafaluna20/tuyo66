@@ -2,22 +2,22 @@
 
 import Link from "next/link";
 
-function BotonDosIzquierda(props) {
+function BotonDosIzquierda({direccion,direccion2,nombre,nombre2}) {
   return (
 
 
     <>
 
       <div className="EstiloLink1-I">
-        <Link href={props.direccion1}>
-          <a className="EstiloTexto1-I"> {props.nombre1}</a>
+        <Link href={direccion}>
+          <a className="EstiloTexto1-I"> {nombre}</a>
         </Link>
       </div>
 
 
       <div className="EstiloLink2-I" >
-        <Link href={props.direccion2}>
-          <a className="EstiloTexto1-I"> {props.nombre2}</a>
+        <Link href={direccion2}>
+          <a className="EstiloTexto1-I"> {nombre2}</a>
         </Link>
       </div>
 

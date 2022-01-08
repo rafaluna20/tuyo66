@@ -1,7 +1,7 @@
 
 import Layout from '../../components/layout/Layout'
 import FiltroNavegacion from '../../components/comPasajero/FiltroNavegacion'
-import MapaGo from './MapaGo'
+
 import BotonDosDerecha from '../../components/comSimples/BotonDosDerecha'
 import BotonSimple from '../../components/comSimples/BotonSimple'
 
@@ -16,8 +16,8 @@ const ListaCarros= () => {
       <div className="cajaBoton">
 
         <BotonDosDerecha
-          nombre1="MAPA"
-          direccion1="/Pasajeros"
+          nombre="MAPA"
+          direccion="/Pasajeros"
           nombre2="LISTA"
           direccion2="ListaCarros"
         />
