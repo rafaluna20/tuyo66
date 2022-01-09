@@ -1,5 +1,6 @@
 import Image from "next/image";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
+import Link from "next/link";
 
 import {es} from "date-fns/locale"
 
@@ -14,7 +15,8 @@ function BussUnidad({producto}) {
 
     <div className="caja-buss-unidad">
 
-
+      <Link href="/productos/[id]" as={`/productos/${id}`}>
+     
       <div className="caja-buss-unidad-izquierdo">
 
         <div className="caja-buss-unidad-izquierdo-s">
@@ -61,7 +63,7 @@ function BussUnidad({producto}) {
 
 
       </div>
-
+      </Link>
 
 
       <div className="caja-buss-unidad-derecho">
@@ -84,7 +86,7 @@ function BussUnidad({producto}) {
 
 
 img{
-width: 90px;
+width: 120px;
 
 }
 
@@ -209,7 +211,7 @@ border-radius: 8px;
 @media (max-width: 600px) {
 
 img{
-width: 50px;
+width: 70px;
 
 }
 

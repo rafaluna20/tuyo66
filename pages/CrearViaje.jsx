@@ -54,7 +54,13 @@ const router=useRouter();
       descripcion:descripcion,
       votos:0,
       comentarios:[],
-      creado:Date.now()
+      creado:Date.now(),
+      creador:{
+        id:usuario.uid,
+        nombre:usuario.displayName
+      },
+      haVotado:[]
+
 
     }
 //insertando en una base datos
