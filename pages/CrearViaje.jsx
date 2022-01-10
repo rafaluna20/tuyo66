@@ -46,6 +46,7 @@ const router=useRouter();
     }
 
     //crear el objeto de nuevo producto
+    
     const producto={
       nombre:nombre,
       empresa:empresa,
@@ -59,9 +60,8 @@ const router=useRouter();
         id:usuario.uid,
         nombre:usuario.displayName
       },
-      haVotado:[]
-
-
+      haVotado:[],
+      asientosVendidos:[],
     }
 //insertando en una base datos
 

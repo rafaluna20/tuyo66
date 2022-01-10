@@ -3,7 +3,6 @@ import Layout from '../../components/layout/Layout'
 import FiltroNavegacion from '../../components/comPasajero/FiltroNavegacion'
 
 import BotonDosDerecha from '../../components/comSimples/BotonDosDerecha'
-import BotonSimple from '../../components/comSimples/BotonSimple'
 
 import ListaCar from '../../components/comPasajero/ListaCar'
 
@@ -29,12 +28,6 @@ const ListaCarros= () => {
         <ListaCar/>
       </div>
 
-      <BotonSimple
-
-        nombre="CONTINUAR"
-        direccion="PasajeroAsientoP1"
-
-      />
 
       <style jsx>{`
 

@@ -10,8 +10,8 @@ const ListaCar = () => {
 
   useEffect(() => {
 
-    const obtenerProductos = () => {
-      firebase.db.collection("productos").orderBy("creado", "desc").onSnapshot(manejarSnapshot)
+    const obtenerProductos = async () => {
+     await firebase.db.collection("productos").orderBy("creado", "desc").onSnapshot(manejarSnapshot)
     }
     obtenerProductos();
   }, []);
@@ -30,20 +30,23 @@ const ListaCar = () => {
 
 
   return (
-    <div >
+    < >
 
       <div className='cajaListaCar'>
 
+        <ul>
 
-        {productos.map(producto => (
-          <>
-            <BussUnidad
-            key={producto.id}
-              producto={producto}
-            />
+          {productos.map(producto => (
+                <BussUnidad
+                  key={producto.id}
+                  producto={producto}
+                />
+          ))}
 
-          </>
-        ))}
+
+
+        </ul>
+
 
 
 
@@ -63,7 +66,8 @@ const ListaCar = () => {
 }
 
   `}</style>
-    </div>
+
+    </>
   )
 }
 

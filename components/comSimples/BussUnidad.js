@@ -13,7 +13,7 @@ function BussUnidad({producto}) {
   return (
 
 
-    <div className="caja-buss-unidad">
+    <li className="caja-buss-unidad">
 
       <Link href="/productos/[id]" as={`/productos/${id}`}>
      
@@ -32,7 +32,7 @@ function BussUnidad({producto}) {
           </div>
 
           <div className="caja-buss-unidad-izquierdo-s12">
-            <div className="caja-buss-unidad-izquierdo-s12-1">ASIENTOS LIRES:</div>
+            <div className="caja-buss-unidad-izquierdo-s12-1">ASIENTOS LIBRES:</div>
             <div className="descripcion">5 und</div>
           </div>
 
@@ -298,7 +298,7 @@ border-radius: 5px;
 `}</style>
 
 
-    </div>
+    </li>
   );
 }
 

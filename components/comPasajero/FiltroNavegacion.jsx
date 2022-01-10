@@ -35,7 +35,7 @@ const FiltroNavegacion = () => {
 
       <style jsx>{`
       .cajaNavegacion{
-    background-color: rgb(88, 88, 88);
+background-color: var(--negro-oscuro2);
 
   margin: 8px 0;
   border-radius: 8px;
