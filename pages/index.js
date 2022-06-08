@@ -1,3 +1,6 @@
+
+import React, { useState, useEffect } from 'react'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -13,12 +16,18 @@ import SalidaLocal from '../components/comPasajero/SalidaLocal'
 import RutasV from '../components/comSimples/RutasV'
 import DestinosMio from '../components/comPasajero/DestinosMio'
 
+import Carousel from '../components/Carousel'
+
+
 
 export default function Home() {
 
-  const navInferior = false
+
+  const probando1 = "estamos en el calcio";
+  console.log(probando1.indexOf("en"));
 
   return (
+    
     <div className={styles.container}>
       <Head>
         <title>tuyo express</title>
@@ -33,6 +42,15 @@ export default function Home() {
 
         <Layout>
           <div className={styles.cajaFondo1}>
+
+
+
+
+            <div className={styles.InterprovincialLocal}>
+
+      <Carousel/>
+              <Carousel />
+            </div>
 
             <FiltroNavegacion />
             <ResumenViajes />
@@ -72,7 +90,7 @@ export default function Home() {
         </Layout>
       </div>
 
-
+      
 
       <footer className={styles.footer}>
         <a

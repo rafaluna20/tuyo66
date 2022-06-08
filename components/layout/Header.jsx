@@ -23,14 +23,22 @@ const Header = () => {
         <a className={stilos.cajaLogo}>
           <Image
           
-            src="/img/logoTuyo.svg"
-            alt="Picture of the author"
-            width={40}
-            height={40}
+            src="/img/logoTuy.png"
+            alt="logo de AKALLPA"
+            width={60}
+            height={60}
             priority
           />
         </a>
       </Link>
+
+      <nav className={stilos.cajaProductos}>
+        <li className={stilos.cajaProductosS}>nosotros
+        
+        </li>
+        <li className={stilos.cajaProductosS}>productos</li>
+        <li className={stilos.cajaProductosS}>servicios</li>
+      </nav>
 
 
       <nav className={stilos.cajaDerecha}>
@@ -41,8 +49,8 @@ const Header = () => {
 
         {usuario ? (
           <>
-            <Link href="/CrearViaje">
-              <a className={stilos.crearLogin}>Crear viaje</a>
+            <Link href="/CrearProyecto">
+              <a className={stilos.crearLogin}>Crear Proyecto</a>
             </Link>
             <div className={stilos.botones}>
              Hola:{usuario.displayName}
@@ -51,6 +59,7 @@ const Header = () => {
             <div className={stilos.botones}>
 
               <button
+                className={stilos.botones}
                type='button'
                onClick={()=>firebase.cerrarSesion()}
                > cerrar sesion</button>

@@ -20,11 +20,13 @@ class MapaGo extends Component {
         defaultCenter={{ lat: -12.138873, lng: -76.9897933 }}
       >
         <Marker
-          position={{ lat: -12.138873, lng: -76.9897933 }}
+          position={{ lat: -12.138873, lng: -76.997933 }}
         />
         <Marker
           position={{ lat: -12.198873, lng: -76.9897933 }}
-        />
+        >
+
+        </Marker>
         <Marker
           position={{ lat: -12.148873, lng: -76.9697933 }}
         />

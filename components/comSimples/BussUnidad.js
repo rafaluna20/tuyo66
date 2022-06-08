@@ -2,13 +2,13 @@ import Image from "next/image";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import Link from "next/link";
 
-import {es} from "date-fns/locale"
+import { es } from "date-fns/locale"
 
 
-function BussUnidad({producto}) {
+function BussUnidad({ producto }) {
 
 
-  const { id, comentarios,creado,descripcion,empresa,nombre,url,urlimagen,votos}= producto;
+  const { id, comentarios, creado, descripcion, empresa, nombre, url, urlimagen, votos } = producto;
 
   return (
 
@@ -16,73 +16,76 @@ function BussUnidad({producto}) {
     <li className="caja-buss-unidad">
 
       <Link href="/productos/[id]" as={`/productos/${id}`}>
-     
-      <div className="caja-buss-unidad-izquierdo">
 
-        <div className="caja-buss-unidad-izquierdo-s">
 
-          <div className="caja-buss-unidad-izquierdo-s12">
-            <div className="caja-buss-unidad-izquierdo-s12-1">EMPRESA:</div>
-            <div className="descripcion">{empresa}</div>
+
+          <div className="caja-buss-unidad-izquierdo">
+
+            <div className="caja-buss-unidad-izquierdo-s">
+
+              <div className="caja-buss-unidad-izquierdo-s12">
+                <div className="caja-buss-unidad-izquierdo-s12-1">EMPRESA:</div>
+                <div className="descripcion">{empresa}</div>
+              </div>
+
+              <div className="caja-buss-unidad-izquierdo-s12">
+                <div className="caja-buss-unidad-izquierdo-s12-1">NOMBRE:</div>
+                <div className="descripcion">{nombre}</div>
+              </div>
+
+              <div className="caja-buss-unidad-izquierdo-s12">
+                <div className="caja-buss-unidad-izquierdo-s12-1">ASIENTOS LIBRES:</div>
+                <div className="descripcion">5 und</div>
+              </div>
+
+              <div className="caja-buss-unidad-izquierdo-s12">
+                <div className="caja-buss-unidad-izquierdo-s12-1">publicado hace:</div>
+                <div className="descripcion">{formatDistanceToNow(new Date(creado), { locale: es })}</div>
+              </div>
+
+            </div>
+
+
+
+            <div className="caja-buss-unidad-izquierdo-i">
+              <div>
+                <div style={{ textAlign: "center", }}> tiempo </div>
+                <div style={{ textAlign: "center", }}>  5h:30min:02s </div>
+              </div>
+              <div>
+                <div style={{ textAlign: "center", }}> votos </div>
+                <div style={{ textAlign: "center", }}>  {votos} </div>
+              </div>
+              <div>
+                <div style={{ textAlign: "center", }}> comentarios </div>
+                <div style={{ textAlign: "center", }}>{comentarios.length}</div>
+              </div>
+
+            </div>
+
+
           </div>
 
-          <div className="caja-buss-unidad-izquierdo-s12">
-            <div className="caja-buss-unidad-izquierdo-s12-1">NOMBRE:</div>
-            <div className="descripcion">{nombre}</div>
-          </div>
-
-          <div className="caja-buss-unidad-izquierdo-s12">
-            <div className="caja-buss-unidad-izquierdo-s12-1">ASIENTOS LIBRES:</div>
-            <div className="descripcion">5 und</div>
-          </div>
-
-          <div className="caja-buss-unidad-izquierdo-s12">
-            <div className="caja-buss-unidad-izquierdo-s12-1">publicado hace:</div>
-            <div className="descripcion">{formatDistanceToNow(new Date(creado),{locale:es}) }</div>
-          </div>
-
-        </div>
-
-
-
-        <div className="caja-buss-unidad-izquierdo-i">
-        <div>
-            <div style={{  textAlign:"center",}}> tiempo </div>
-            <div style={{ textAlign: "center", }}>  5h:30min:02s </div>
-        </div>
-          <div>
-            <div style={{ textAlign: "center", }}> votos </div>
-            <div style={{ textAlign: "center", }}>  {votos} </div>
-          </div>
-          <div>
-            <div style={{ textAlign: "center", }}> comentarios </div>
-            <div style={{ textAlign: "center", }}>{comentarios.length}</div>
-          </div>
-
-        </div>
-
-
-      </div>
       </Link>
 
+          <div className="caja-buss-unidad-derecho">
 
-      <div className="caja-buss-unidad-derecho">
+            <span className="caja-buss-unidad-derecho-s">
+              <img src={urlimagen} alt="imagen de carro" />
+            </span>
 
-        <span className="caja-buss-unidad-derecho-s">
-          <img src={urlimagen} alt="imagen de carro"/>
-        </span>
+            <div className="caja-buss-unidad-derecho-i">
 
-        <div className="caja-buss-unidad-derecho-i">
+              <div> PASAJE </div>
+              <div>  S/ 50.00 </div>
 
-          <div> PASAJE </div>
-          <div>  S/ 50.00 </div>
-
-        </div>
+            </div>
 
 
-      </div>
+          </div>
 
-<style jsx>{`
+
+      <style jsx>{`
 
 
 img{

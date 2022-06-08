@@ -13,20 +13,20 @@ const FiltroNavegacion = () => {
 
       <FiltroUnidad
         urlimagen="/img/reloj11.png"
-        nombre="Reloj"
+        nombre="Geosinteticos"
       />
 
       <FiltroUnidad
         urlimagen="/img/auto11.png"
-        nombre="Auto"
+        nombre="gaviones"
       />
       <FiltroUnidad
         urlimagen="/img/minivan11.png"
-        nombre="Mivan"
+        nombre="Esttructuras Metalicas"
       />
       <FiltroUnidad
         urlimagen="/img/buss11.png"
-        nombre="Bus"
+        nombre="Naves Industriales"
       />
       <FiltroUnidad
         urlimagen="/img/otros11.png"

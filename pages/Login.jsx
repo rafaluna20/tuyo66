@@ -10,7 +10,6 @@ import firebase from '../firebase'
 const STATE_INICIAL = {
   email: "",
   password: ""
-
 }
 
 
