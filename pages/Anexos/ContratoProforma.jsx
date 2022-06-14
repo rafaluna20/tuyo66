@@ -15,30 +15,30 @@ import Parte01 from '../../components/Documentos/Parte01';
 
 
 const ContratoProforma = (
-{
-  
-    aliasEntidad,
-  nombreEntidad,
-  rucEntidad,
-  domicilioEntidad,
-  procesoEntidad,
-  objetoConvocatoriaEntidad,
-  fecha1,
-  plazoEjecucion,
-  montoObra,
-  ofertaSoles,
+  {
 
-  representanteLegalEntidad,
-  dniRLegalEntidad,
-  emailRlegalEntidad,
-  telefonoRLegalEntidad,
+    aliasEntidad,
+    nombreEntidad,
+    rucEntidad,
+    domicilioEntidad,
+    procesoEntidad,
+    objetoConvocatoriaEntidad,
+    fecha1,
+    plazoEjecucion,
+    montoObra,
+    ofertaSoles,
+
+    representanteLegalEntidad,
+    dniRLegalEntidad,
+    emailRlegalEntidad,
+    telefonoRLegalEntidad,
 
     aliasEmpresa1, nombreEmpresa1, rucEmpresa1, direccionEmpresa1, inscritoLocalidadEmpresa1,
-  fichaEmpresa1, asientoNumeroEmpresa1,
+    fichaEmpresa1, asientoNumeroEmpresa1,
 
     representanteLegalEmpresa1, dniEmpresa1, direccionRLEmpresa1, emailEmpresa1, telefonoEmpresa1,
-  inscritoRLEmpresa1, fichaRLEmpresa1, asientoRLEmpresa1,
-}
+    inscritoRLEmpresa1, fichaRLEmpresa1, asientoRLEmpresa1,
+  }
 
 ) => {
 
@@ -71,30 +71,30 @@ const ContratoProforma = (
         <div style={{ textAlign: "justify", fontSize: "14px" }}>
           <br></br>
           Conste por el presente documento, la contratación de servicio <b>{objetoConvocatoriaEntidad} </b> , que celebra de
-          una parte <b> {nombreEntidad } </b> en adelante <b> {aliasEntidad} </b> , con  <b> RUC Nº {rucEntidad}</b>,
+          una parte <b> {nombreEntidad} </b> en adelante <b> {aliasEntidad} </b> , con  <b> RUC Nº {rucEntidad}</b>,
           con domicilio legal en  {domicilioEntidad}, representada por <b>{representanteLegalEntidad} </b> , identificado con DNI
-          Nº  {dniRLegalEntidad}, y de otra parte 
+          Nº  {dniRLegalEntidad}, y de otra parte
           {nombreEmpresa1.length > 0 ? (<>
             <b> {nombreEmpresa1}</b>,  con RUC Nº <b>{rucEmpresa1}</b>, con domicilio
             legal en {direccionEmpresa1}, inscrita en la Ficha N° {fichaEmpresa1} Asiento N°
             {asientoNumeroEmpresa1} del Registro de Personas Jurídicas de la ciudad de <b>{inscritoLocalidadEmpresa1}</b> , debidamente
-            representado por su Representante Legal,   
+            representado por su Representante Legal,
           </>
-   
-           ):"" }      
-           
-              <b> {representanteLegalEmpresa1}</b>, DNI N°
-          <b>{dniEmpresa1}</b>, con direccion en {direccionRLEmpresa1}      
-          
+
+          ) : ""}
+
+          <b> {representanteLegalEmpresa1}</b>, DNI N°
+          <b>{dniEmpresa1}</b>, con direccion en {direccionRLEmpresa1}
+
 
           {nombreEmpresa1.length > 0 ? (<>
-         según poder inscrito en la Ficha N° {fichaRLEmpresa1}, Asiento N° {asientoRLEmpresa1} del Registro
-          de Personas Jurídicas de la ciudad de {inscritoRLEmpresa1} 
+            según poder inscrito en la Ficha N° {fichaRLEmpresa1}, Asiento N° {asientoRLEmpresa1} del Registro
+            de Personas Jurídicas de la ciudad de {inscritoRLEmpresa1}
           </>
 
-          ) : ""}  
-          
-              , a quien en adelante se le denominará <b>
+          ) : ""}
+
+          , a quien en adelante se le denominará <b>
             {aliasEmpresa1}  </b>en los términos y condiciones siguientes:
           <br></br>
           <br></br>
@@ -130,10 +130,10 @@ const ContratoProforma = (
           <b>  <u>CLAUSULA TERCERA: MONTO CONTRACTUAL</u> </b>
         </div>
         <div style={{ textAlign: "justify", fontSize: "14px" }}>
-          El monto total del presente contrato asciende a <b> {montoObra + ".00"} {ofertaSoles}({numeroLetras} y/100 soles)</b> , que incluye
-          todos los impuestos de Ley.   <br></br>
-          Este monto comprende el costo del bien, todos los tributos, seguros, transporte, inspecciones,
-          pruebas y, de ser el caso, los costos laborales conforme a la legislación vigente, así como cualquier
+          El monto total del presente contrato asciende a <b> {montoObra + ".00"} {ofertaSoles} ({numeroLetras} y/100 soles)</b> ,
+          sin IGV.   <br></br>
+          Este monto comprende el costo del bien, seguros, transporte,
+          asi como cualquier
           otro concepto que pueda tener incidencia sobre la ejecución de la prestación materia del presente
           contrato.
           <br></br>
@@ -146,7 +146,7 @@ const ContratoProforma = (
         </div>
         <div style={{ textAlign: "justify", fontSize: "14px" }}>
           <b>{aliasEntidad}</b>  se obliga a pagar la contraprestación a  <b> {aliasEmpresa1}</b> en SOLES de la siguiente forma:
-          <br></br> 
+          <br></br>
           <b>PRIMER PAGO:</b> El 20% a la firma del contrato<br></br>
           <b>RESTO DE PAGO:</b> Conforme a la valorizacion de la obra o servicio <br></br>
           Luego de la recepción formal  el responsable debe otorgar la conformidad de la prestación y cancelacion del PAGO  por el servicio u obra, y deberá hacerlo en un
@@ -182,14 +182,14 @@ const ContratoProforma = (
           <b>  <u>CLAUSULA SEXTA: ECEPCIÓN Y CONFORMIDAD DE LA PRESTACIÓN </u> </b>
         </div>
         <div style={{ textAlign: "justify", fontSize: "14px" }}>
-          La recepción será otorgada por representante de la  <b> {aliasEntidad}</b> y la conformidad será
+          La recepción será otorgada por representante de  <b> {aliasEntidad}</b> y la conformidad será
           otorgada por area responsable en la contratacion en el plazo máximo de  de 7 días de producida la recepción.
           <br></br>
           De existir observaciones, <b>{aliasEntidad} </b> las comunica a <b>{aliasEmpresa1} </b>, indicando claramente el
           sentido de estas, otorgándole un plazo  que sera acordado por ambas partes.
           Dependiendo de la complejidad o sofisticación de las subsanaciones a realizar el plazo para
           subsanar  se definira una fecha  para la subsanaciones. Si pese al plazo otorgado,
-          EL {aliasEmpresa1} no cumpliese a cabalidad con la subsanación, {aliasEntidad}  puede otorgar al
+          {aliasEmpresa1} no cumpliese a cabalidad con la subsanación, {aliasEntidad}  puede otorgar al
           {aliasEmpresa1} periodos adicionales para las correcciones pertinentes.
           <br></br>
           <br></br>
@@ -245,8 +245,8 @@ const ContratoProforma = (
 
           El retraso se justifica a través de la solicitud de ampliación de plazo debidamente aprobado.
           Adicionalmente, se considera justificado el retraso, y en consecuencia no se aplica penalidad,
-          cuando  {aliasEmpresa1} o LA ENTIDAD acredite, de modo objetivamente sustentado.  <br></br>
-       
+          cuando  {aliasEmpresa1} o {aliasEntidad} acredite, de modo objetivamente sustentado.  <br></br>
+
           La penalidades pueden alcanzar  un monto máximo equivalente al veinte
           por ciento (20%) del monto del contrato vigente, o de ser el caso, del ítem que debió ejecutarse.
           Cuando se llegue a cubrir el monto máximo de la penalidad por mora o el monto máximo para otras

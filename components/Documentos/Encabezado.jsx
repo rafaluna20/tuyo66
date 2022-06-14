@@ -17,7 +17,7 @@ const Encabezado = ({ children, procesoEntidad, nombreEmpresa1 }) => {
             <Image
               src="/img/logoCivil1.png"
               alt="logo de AKALLPA"
-              width={100}
+              width={200}
               height={80}
               priority
             />
@@ -75,7 +75,7 @@ const Encabezado = ({ children, procesoEntidad, nombreEmpresa1 }) => {
   border-color: transparent transparent #050505 transparent;
   border-width: 0 2px 2px 2px;
 */
-    box-shadow:inset 0px 0px 50px 50px rgba(0, 0, 0, 0.4);
+    box-shadow:inset 0px 0px 50px 50px rgba(0, 0, 0, 0.7);
     border-radius:10px;
     color:white;
   

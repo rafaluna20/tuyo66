@@ -8,47 +8,47 @@ import Encabezado from '../../components/Documentos/Encabezado';
 
 
 /*datos de la entidad contratante */
-const aliasEntidad = "rafelea";
-const nombreEntidad = "AKALLPA PERU SAC";
-const rucEntidad = "20565352645";
-const domicilioEntidad = "PLAZA DE ARMAS ACOMBAMBA S/N";
+const aliasEntidad = "EL CONTRATANTE";
+const nombreEntidad = "ROMERO GRUAS E.I.R.L";
+const rucEntidad = "20492660737";
+const domicilioEntidad = "CAL. PACHACUTEC NRO.1923 LA VICTORIA/ LAMBAYEQUE-CHICLAYO-LA VICTORIA";
 
 /*datos del representante legal de entidad */
-const representanteLegalEntidad = "RAFAEL ESCOBAR LUNA";
-const dniRLegalEntidad = "42271611";
-const emailRlegalEntidad = "RESCOBAL@AKALLPA.COM";
-const telefonoRLegalEntidad = "084-437590";
+const representanteLegalEntidad = "ROMERO ARO PERCY PABLO";
+const dniRLegalEntidad = "-------";
+const emailRlegalEntidad = "a-administrativo@romerogruas.com.pe";
+const telefonoRLegalEntidad = "998 192 141";
 
 /*datos del postor 01 */
 const aliasEmpresa1 = " EL CONTRATISTA"
-const nombreEmpresa1 = "";
-const rucEmpresa1 = "";
-const direccionEmpresa1 = " AV. CCOLLASUYO LOTE B-8 URB. MANUAL PRADO";
+const nombreEmpresa1 = "ZURE PERUVIAN TECHNOLOGY S.A.C";
+const rucEmpresa1 = "20565307461";
+const direccionEmpresa1 = " Av. Manuel Candamo Nro. 559 Bar. Acobamba (S70776254)";
 
-const inscritoLocalidadEmpresa1 = "SEDE CUSCO";
-const fichaEmpresa1 = "11182144";
-const asientoNumeroEmpresa1 = "A-01";
+const inscritoLocalidadEmpresa1 = "SEDE LIMA";
+const fichaEmpresa1 = "13286038";
+const asientoNumeroEmpresa1 = "--";
 
 /*datos del representante legal del postor 01 */
-const representanteLegalEmpresa1 = "YESENIA CHILE LETONA";
-const dniEmpresa1 = "42271611";
-const direccionRLEmpresa1 = "av. san juan ";
-const emailEmpresa1 = "gerencia@ferconss.com.pe";
+const representanteLegalEmpresa1 = "ALEXANDER J. ESCOBAR NAVARRO";
+const dniEmpresa1 = "76349915";
+const direccionRLEmpresa1 = "SANTIAGO SURCO ";
+const emailEmpresa1 = "ZURE.PERU@GMAIL.COM";
 const telefonoEmpresa1 = "922802768";
 
-const inscritoRLEmpresa1 = "SEDE CUSCO";
-const fichaRLEmpresa1 = "1182144";
-const asientoRLEmpresa1 = "A-01";
+const inscritoRLEmpresa1 = "SEDE LIMA";
+const fichaRLEmpresa1 = "-----";
+const asientoRLEmpresa1 = "---";
 
 /*fecha de la presentacion */
 
-const procesoEntidad = "CONVOCATORIA  PARA SERVICIO DE CONSULTURIA";
-const objetoConvocatoriaEntidad = "SERVICIO DE CONSULTURIA PARA EL FORTALECIMIENTO DE  CORREDOR VIAL ACOBAMBA HUACAVELICA EN DOS ETAPAS"
+const procesoEntidad = "CONTRATO  PARA SERVICIO ";
+const objetoConvocatoriaEntidad = "obra: CONSTRUCCION DE CERCO PERIMETRICO DE 340.0metros LINEALES Y UNA ALTURA DE 4.0metros UBICADA EN CHILCA-PUCUSANA-LIMA "
 
 
-const fecha1 = "cusco, 18 de mayo de 2022"
-const plazoEjecucion = "60 DIAS CALENDARIOS "
-const montoObra = "15650"
+const fecha1 = "LIMA, 09 de junio de 2022"
+const plazoEjecucion = "90 DIAS CALENDARIOS "
+const montoObra = "160033"
 const ofertaSoles = " en soles"
 
 

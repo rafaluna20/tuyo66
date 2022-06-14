@@ -20,7 +20,7 @@ const SubSubSeparador = ({ children, procesoEntidad, nombreEmpresa1, objetoConvo
             <Image
               src="/img/logoCivil1.png"
               alt="logo de AKALLPA"
-              width={80}
+              width={120}
               height={60}
               priority
             />

@@ -23,8 +23,7 @@ import Carousel from '../components/Carousel'
 export default function Home() {
 
 
-  const probando1 = "estamos en el calcio";
-  console.log(probando1.indexOf("en"));
+  
 
   return (
     

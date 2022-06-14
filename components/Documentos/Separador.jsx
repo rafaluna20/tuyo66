@@ -20,7 +20,7 @@ const Separador = ({ children, procesoEntidad, nombreEmpresa1, objetoConvocatori
             <Image
               src="/img/logoCivil1.png"
               alt="logo de AKALLPA"
-              width={180}
+              width={380}
               height={150}
               priority
             />

@@ -36,6 +36,8 @@ const admisionOferta1 = {
   separador2Texto: "DOCUMENTOS PARA ACREDITAR LOS REQUISITOS DE CALIFICACION",
   subSeparador21Numero: "",
   subSeparador21Texto: "PROPUESTA ECOCNOMICA",
+  subSubSeparador211Numero: "",
+  subSubSeparador211Texto: "PRECIO DE LA OFERTA (ANEXO 06)",
   subSeparador22Numero: "",
   subSeparador22Texto: "PROPUESTA TECNICA ESTRATEGICA",
   subSubSeparador221Numero: "2.2.1",
@@ -54,6 +56,13 @@ const admisionOferta1 = {
 
   subSubSeparador241Numero: "",
   subSubSeparador241Texto: "RESIDENTE DE LA OBRA",
+  cuartaSeparador2411Numero:"",
+  cuartaSeparador2411Texto: "Formacion academica",
+  cuartaSeparador2412Numero: "",
+  cuartaSeparador2412Texto: "Capacitacion",
+  cuartaSeparador2413Numero: "",
+  cuartaSeparador2413Texto: "Experiencia del personal clave",
+
 
   subSubSeparador242Numero: "",
   subSubSeparador242Texto: "PERSONAL DE APOYO",
@@ -109,10 +118,14 @@ const AnexosTotal = ({
     separador2Numero, separador2Texto,
 
     subSeparador21Numero, subSeparador21Texto,
+    subSubSeparador211Numero, subSubSeparador211Texto,
     subSeparador22Numero, subSeparador22Texto,
     subSeparador23Numero, subSeparador23Texto,
     subSeparador24Numero, subSeparador24Texto,
     subSubSeparador241Numero, subSubSeparador241Texto,
+    cuartaSeparador2411Numero, cuartaSeparador2411Texto,
+    cuartaSeparador2412Numero, cuartaSeparador2412Texto,
+    cuartaSeparador2413Numero, cuartaSeparador2413Texto,
     subSubSeparador242Numero, subSubSeparador242Texto,
 
     separador3Numero, separador3Texto,
@@ -432,12 +445,6 @@ const AnexosTotal = ({
 
           </div>
 
-
-
-
-
-
-
           <div>
 
             <div className='cajaInputPrimaria'>
@@ -478,10 +485,10 @@ const AnexosTotal = ({
 
               <input
                 className='inputIzquierdaSecundaria'
-                type="number"
-                id="subSeparador2.1Numero"
+                type="text"
+                id="subSeparador21Numero"
                 placeholder='2.1'
-                name='subSeparador2.1Numero'
+                name='subSeparador21Numero'
 
                 value={subSeparador21Numero}
                 onChange={handleChange}
@@ -508,16 +515,50 @@ const AnexosTotal = ({
 
             </div>
 
+            <div className='cajaInputTercera'>
+
+
+              <input
+                className='inputIzquierdaTercera'
+                type="texto"
+                id="subSubSeparador111Numero"
+                placeholder='2.1.1'
+                name='subSubSeparador211Numero'
+
+                value={subSubSeparador211Numero}
+                onChange={handleChange}
+
+              />
+
+              <input
+                className='inputCentralTercera'
+                type="text"
+                id="subSubSeparador211Texto"
+                placeholder='separador tercera'
+                name='subSubSeparador211Texto'
+
+                value={subSubSeparador211Texto}
+                onChange={handleChange}
+
+              />
+              <input
+                className='inputDerechaTercera'
+                type="text"
+                placeholder='325'
+              />
+
+
+            </div>
 
             <div className='cajaInputSecundaria'>
 
 
               <input
                 className='inputIzquierdaSecundaria'
-                type="number"
-                id="subSeparador2.2Numero"
+                type="text"
+                id="subSeparador22Numero"
                 placeholder='2.2'
-                name='subSeparador2.2Numero'
+                name='subSeparador22Numero'
 
                 value={subSeparador22Numero}
                 onChange={handleChange}
@@ -614,6 +655,181 @@ const AnexosTotal = ({
 
             </div>
 
+            <div className='cajaInputTercera'>
+
+
+              <input
+                className='inputIzquierdaTercera'
+                type="texto"
+                id="subSubSeparador241Numero"
+                placeholder='2.4.1'
+                name='subSubSeparador241Numero'
+
+                value={subSubSeparador241Numero}
+                onChange={handleChange}
+
+              />
+
+              <input
+                className='inputCentralTercera'
+                type="text"
+                id="subSubSeparador241Texto"
+                placeholder='separador tercera'
+                name='subSubSeparador241Texto'
+
+                value={subSubSeparador241Texto}
+                onChange={handleChange}
+
+              />
+              <input
+                className='inputDerechaTercera'
+                type="text"
+                placeholder='325'
+              />
+
+
+            </div>
+
+            <div className='cajaInputCuarta'>
+
+
+              <input
+                className='inputIzquierdaCuarta'
+                type="texto"
+                id="cuartaSeparador2411Numero"
+                placeholder='A.1'
+                name='cuartaSeparador2411Numero'
+
+                value={cuartaSeparador2411Numero}
+                onChange={handleChange}
+
+              />
+
+              <input
+                className='inputCentralCuarta'
+                type="text"
+                id="cuartaSeparador2411Texto"
+                placeholder='separador cuarta'
+                name='cuartaSeparador2411Texto'
+
+                value={cuartaSeparador2411Texto}
+                onChange={handleChange}
+
+              />
+              <input
+                className='inputDerechaCuarta'
+                type="text"
+                placeholder='325'
+              />
+
+
+            </div>
+
+            <div className='cajaInputCuarta'>
+
+
+              <input
+                className='inputIzquierdaCuarta'
+                type="texto"
+                id="cuartaSeparador2412Numero"
+                placeholder='A.2'
+                name='cuartaSeparador2412Numero'
+
+                value={cuartaSeparador2412Numero}
+                onChange={handleChange}
+
+              />
+
+              <input
+                className='inputCentralCuarta'
+                type="text"
+                id="cuartaSeparador2412Texto"
+                placeholder='separador cuarta'
+                name='cuartaSeparador2412Texto'
+
+                value={cuartaSeparador2412Texto}
+                onChange={handleChange}
+
+              />
+              <input
+                className='inputDerechaCuarta'
+                type="text"
+                placeholder='325'
+              />
+
+
+            </div>
+
+            <div className='cajaInputCuarta'>
+
+
+              <input
+                className='inputIzquierdaCuarta'
+                type="texto"
+                id="cuartaSeparador2413Numero"
+                placeholder='A.3'
+                name='cuartaSeparador2413Numero'
+
+                value={cuartaSeparador2413Numero}
+                onChange={handleChange}
+
+              />
+
+              <input
+                className='inputCentralCuarta'
+                type="text"
+                id="cuartaSeparador2413Texto"
+                placeholder='separador cuarta'
+                name='cuartaSeparador2413Texto'
+
+                value={cuartaSeparador2413Texto}
+                onChange={handleChange}
+
+              />
+              <input
+                className='inputDerechaCuarta'
+                type="text"
+                placeholder='325'
+              />
+
+
+            </div>
+
+
+            <div className='cajaInputTercera'>
+
+
+              <input
+                className='inputIzquierdaTercera'
+                type="texto"
+                id="subSubSeparador242Numero"
+                placeholder='2.4.2'
+                name='subSubSeparador242Numero'
+
+                value={subSubSeparador242Numero}
+                onChange={handleChange}
+
+              />
+
+              <input
+                className='inputCentralTercera'
+                type="text"
+                id="subSubSeparador242Texto"
+                placeholder='separador tercera'
+                name='subSubSeparador242Texto'
+
+                value={subSubSeparador242Texto}
+                onChange={handleChange}
+
+              />
+              <input
+                className='inputDerechaTercera'
+                type="text"
+                placeholder='325'
+              />
+
+
+            </div>
 
           </div>
 
@@ -761,6 +977,43 @@ color:blue;
 
 
 
+.cajaInputCuarta{
+   background-color:  #e1e1e1;
+   margin:0px 0px 0px 30px;
+   display:flex;
+   
+
+}
+
+.inputIzquierdaCuarta{
+width:50px;
+   font-weight: 700;
+font-family: Roboto;
+font-size:9px;
+color:black;
+}
+.inputCentralCuarta{
+
+  flex:1;
+   font-weight: 700;
+font-family: Roboto;
+font-size:9px;
+color:black;
+}
+
+
+.inputDerechaCuarta{
+    width:50px;
+       font-weight: 700;
+font-family: Roboto;
+font-size:9px;
+color:black;
+}
+
+
+
+
+
 
 
 
@@ -809,74 +1062,74 @@ color:blue;
 
       {/*hoja 01############# anex0 01################################# */}
 
-      {subSubSeparador111Numero.length > 0 ?(
-     <Encabezado
-        nombreEmpresa1={nombreEmpresa1}
-        procesoEntidad={procesoEntidad}
-      >
-        <Titulos
-
-          titulo1="ANEXO Nº1"
-          titulo2="DECLARACION JURADA DE DATOS DEL POSTOR"
-          titulo3=""
-        />
-
-        <Dirigido
-          dirigido="COMITE ESPECIAL"
-          procesoEntidad={procesoEntidad}
-        />
-
-        <div style={{ textAlign: "justify" }}>
-
-          El que se suscribe, <b>{representanteLegalEmpresa1} </b> , postor y/o Representante Legal de <b>{nombreEmpresa1} </b> , identificado con <b>DNI N°{dniEmpresa1} </b>, con poder inscrito en la localidad de
-          <b> {inscritoLocalidadEmpresa1}</b>  en la Ficha Nº <b> {fichaEmpresa1} </b> Asiento <b> Nº {asientoNumeroEmpresa1},DECLARO BAJO JURAMENTO </b> que la siguiente información se sujeta a la verdad:
-        </div>
-
-        <TablaEmpresa
+      {subSubSeparador111Numero.length > 0 ? (
+        <Encabezado
           nombreEmpresa1={nombreEmpresa1}
-          direccionEmpresa1={direccionEmpresa1}
-          rucEmpresa1={rucEmpresa1}
-          telefonoEmpresa1={telefonoEmpresa1}
-          emailEmpresa1={emailEmpresa1}
-        />
+          procesoEntidad={procesoEntidad}
+        >
+          <Titulos
 
-        <div>
-          <b>Autorizacion de notificacion por correo electronico:</b>
-        </div>
+            titulo1="ANEXO Nº1"
+            titulo2="DECLARACION JURADA DE DATOS DEL POSTOR"
+            titulo3=""
+          />
 
-        <div style={{ fontSize: "11px" }}>
-          <br></br>
+          <Dirigido
+            dirigido="COMITE ESPECIAL"
+            procesoEntidad={procesoEntidad}
+          />
 
-          … Si autorizo que se notifiquen al correo electrónico indicado las siguientes <br></br>
-          actuaciones:<br></br>
-          1.  Solicitud de la descripción a detalle de todos los elementos constitutivos de la oferta.<br></br>
-          2.  Solicitud de subsanación de los requisitos para perfeccionar el contrato.<br></br>
-          3.  Solicitud al postor que ocupó el segundo lugar en el orden de prelación para presentar los<br></br>
-          documentos para perfeccionar el contrato.<br></br>
-          4.  Respuesta a la solicitud de acceso al expediente de contratación.<br></br>
-          5.  Notificación de la orden de compra17<br></br>
-          <br></br>
-          Asimismo, me comprometo a remitir la confirmación de recepción, en el plazo máximo de dos (2) días<br></br>
-          hábiles de recibida la comunicación.<br></br>
-          <br></br>
-          <br></br>
+          <div style={{ textAlign: "justify" }}>
 
-        </div>
-        <div>
-          {fecha1}
-        </div>
-        <FirmaGerente />
+            El que se suscribe, <b>{representanteLegalEmpresa1} </b> , postor y/o Representante Legal de <b>{nombreEmpresa1} </b> , identificado con <b>DNI N°{dniEmpresa1} </b>, con poder inscrito en la localidad de
+            <b> {inscritoLocalidadEmpresa1}</b>  en la Ficha Nº <b> {fichaEmpresa1} </b> Asiento <b> Nº {asientoNumeroEmpresa1},DECLARO BAJO JURAMENTO </b> que la siguiente información se sujeta a la verdad:
+          </div>
+
+          <TablaEmpresa
+            nombreEmpresa1={nombreEmpresa1}
+            direccionEmpresa1={direccionEmpresa1}
+            rucEmpresa1={rucEmpresa1}
+            telefonoEmpresa1={telefonoEmpresa1}
+            emailEmpresa1={emailEmpresa1}
+          />
+
+          <div>
+            <b>Autorizacion de notificacion por correo electronico:</b>
+          </div>
+
+          <div style={{ fontSize: "11px" }}>
+            <br></br>
+
+            … Si autorizo que se notifiquen al correo electrónico indicado las siguientes <br></br>
+            actuaciones:<br></br>
+            1.  Solicitud de la descripción a detalle de todos los elementos constitutivos de la oferta.<br></br>
+            2.  Solicitud de subsanación de los requisitos para perfeccionar el contrato.<br></br>
+            3.  Solicitud al postor que ocupó el segundo lugar en el orden de prelación para presentar los<br></br>
+            documentos para perfeccionar el contrato.<br></br>
+            4.  Respuesta a la solicitud de acceso al expediente de contratación.<br></br>
+            5.  Notificación de la orden de compra17<br></br>
+            <br></br>
+            Asimismo, me comprometo a remitir la confirmación de recepción, en el plazo máximo de dos (2) días<br></br>
+            hábiles de recibida la comunicación.<br></br>
+            <br></br>
+            <br></br>
+
+          </div>
+          <div>
+            {fecha1}
+          </div>
+          <FirmaGerente />
 
 
-        <style jsx>{`
+          <style jsx>{`
 
 
 `}</style>
 
-      </Encabezado>
+        </Encabezado>
 
-      ):""}
- 
+      ) : ""}
+
       {subSubSeparador112Numero.length > 0 ? <SubSubSeparador
         nombreEmpresa1={nombreEmpresa1}
         procesoEntidad={procesoEntidad}
@@ -898,63 +1151,63 @@ color:blue;
       {/*hoja 02############# anex0 02################################# */}
 
       {subSubSeparador113Numero.length > 0 ? (
-     <Encabezado
-        nombreEmpresa1={nombreEmpresa1}
-        procesoEntidad={procesoEntidad}
-      >
-        <Titulos
-
-          titulo1="ANEXO Nº2"
-          titulo2="DECLARACION JURADA"
-          titulo3="(ART. 52 DEL REGLAMENTO DE LA LEY DE CONTRATACIONES DEL ESTADO)"
-        />
-
-        <Dirigido
-          dirigido="COMITE DE SELECCION"
+        <Encabezado
+          nombreEmpresa1={nombreEmpresa1}
           procesoEntidad={procesoEntidad}
+        >
+          <Titulos
 
-        />
-        <div style={{ textAlign: "justify" }}>
-          Mediante el presente el suscrito, postor y/o Representante Legal <b>{representanteLegalEmpresa1} </b> de la
-          <b> {nombreEmpresa1} </b>  identificado con <b> DNI º {dniEmpresa1}</b>,con <b> RUC {rucEmpresa1} </b>, domiciliado en {direccionEmpresa1} declaro bajo juramento:
-        </div>
-        <div style={{ fontSize: "12px", paddingTop: "10px", paddingLeft: "40px", paddingRight: "50px", textAlign: "justify" }}>
-          <br></br>
-          i. No haber incurrido y me obligo a no incurrir en actos de corrupción, así como a respetar el
-          principio de integridad.
-          <br></br>  <br></br>
-          ii. No tener impedimento para postular en el procedimiento de selección ni para contratar con el
-          Estado, conforme al artículo 11 de la Ley de Contrataciones del Estado.
-          <br></br>
-          <br></br>
-          iii. Conocer las sanciones contenidas en la Ley de Contrataciones del Estado y su Reglamento,
-          así como las disposiciones aplicables de la Ley N° 27444, Ley del Procedimiento Administrativo
-          General.
-          <br></br> <br></br>
-          iv. Participar en el presente proceso de contratación en forma independiente sin mediar consulta,
-          comunicación, acuerdo, arreglo o convenio con ningún proveedor; y, conocer las disposiciones
-          del Decreto Legislativo Nº 1034, Decreto Legislativo que aprueba la Ley de Represión de
-          Conductas Anticompetitivas.
-          <br></br> <br></br>
-          v. Conocer, aceptar y someterme a las bases, condiciones y reglas del procedimiento de
-          selección.
-          <br></br> <br></br>
-          vi. Ser responsable de la veracidad de los documentos e información que presento en el presente
-          procedimiento de selección.
-          <br></br> <br></br>
-          vii. Comprometerme a mantener la oferta presentada durante el procedimiento de selección y a
-          perfeccionar el contrato, en caso de resultar favorecido con la buena pro.
-          <br></br> <br></br>
-          <br></br> <br></br>
-        </div>
-        <div>{fecha1}</div>
+            titulo1="ANEXO Nº2"
+            titulo2="DECLARACION JURADA"
+            titulo3="(ART. 52 DEL REGLAMENTO DE LA LEY DE CONTRATACIONES DEL ESTADO)"
+          />
 
-        <FirmaGerente />
-      </Encabezado>
+          <Dirigido
+            dirigido="COMITE DE SELECCION"
+            procesoEntidad={procesoEntidad}
 
-      ):""}
+          />
+          <div style={{ textAlign: "justify" }}>
+            Mediante el presente el suscrito, postor y/o Representante Legal <b>{representanteLegalEmpresa1} </b> de la
+            <b> {nombreEmpresa1} </b>  identificado con <b> DNI º {dniEmpresa1}</b>,con <b> RUC {rucEmpresa1} </b>, domiciliado en {direccionEmpresa1} declaro bajo juramento:
+          </div>
+          <div style={{ fontSize: "12px", paddingTop: "10px", paddingLeft: "40px", paddingRight: "50px", textAlign: "justify" }}>
+            <br></br>
+            i. No haber incurrido y me obligo a no incurrir en actos de corrupción, así como a respetar el
+            principio de integridad.
+            <br></br>  <br></br>
+            ii. No tener impedimento para postular en el procedimiento de selección ni para contratar con el
+            Estado, conforme al artículo 11 de la Ley de Contrataciones del Estado.
+            <br></br>
+            <br></br>
+            iii. Conocer las sanciones contenidas en la Ley de Contrataciones del Estado y su Reglamento,
+            así como las disposiciones aplicables de la Ley N° 27444, Ley del Procedimiento Administrativo
+            General.
+            <br></br> <br></br>
+            iv. Participar en el presente proceso de contratación en forma independiente sin mediar consulta,
+            comunicación, acuerdo, arreglo o convenio con ningún proveedor; y, conocer las disposiciones
+            del Decreto Legislativo Nº 1034, Decreto Legislativo que aprueba la Ley de Represión de
+            Conductas Anticompetitivas.
+            <br></br> <br></br>
+            v. Conocer, aceptar y someterme a las bases, condiciones y reglas del procedimiento de
+            selección.
+            <br></br> <br></br>
+            vi. Ser responsable de la veracidad de los documentos e información que presento en el presente
+            procedimiento de selección.
+            <br></br> <br></br>
+            vii. Comprometerme a mantener la oferta presentada durante el procedimiento de selección y a
+            perfeccionar el contrato, en caso de resultar favorecido con la buena pro.
+            <br></br> <br></br>
+            <br></br> <br></br>
+          </div>
+          <div>{fecha1}</div>
 
- 
+          <FirmaGerente />
+        </Encabezado>
+
+      ) : ""}
+
+
       {subSubSeparador114Numero.length > 0 ? <SubSubSeparador
         nombreEmpresa1={nombreEmpresa1}
         procesoEntidad={procesoEntidad}
@@ -967,52 +1220,52 @@ color:blue;
 
 
       {subSubSeparador114Numero.length > 0 ? (
-   <Encabezado
-        nombreEmpresa1={nombreEmpresa1}
-        procesoEntidad={procesoEntidad}
-      >
-
-        <Titulos
-
-          titulo1="ANEXO Nº3"
-          titulo2="DECLARACIÓN JURADA DE CUMPLIMIENTO DE LAS ESPECIFICACIONES TÉCNICAS
-"
-          titulo3=""
-        />
-
-        <Dirigido
-          dirigido="COMITE DE SELECCION"
+        <Encabezado
+          nombreEmpresa1={nombreEmpresa1}
           procesoEntidad={procesoEntidad}
+        >
 
-        />
-        <div style={{ textAlign: "justify" }}>
-          <br></br>
-          Es grato dirigirme a usted, para hacer de su conocimiento que luego de haber examinado las bases y
-          demás documentos del procedimiento de la referencia y, conociendo todos los alcances y las
-          condiciones detalladas en dichos documentos, el postor que suscribe ofrece el <b> {objetoConvocatoriaEntidad}</b> , de conformidad con las Especificaciones Técnicas que se indican
-          en el numeral 3.1 del Capítulo III de la sección específica de las bases y los documentos del
-          procedimiento.
+          <Titulos
 
-          <br></br> <br></br>
-        </div>
+            titulo1="ANEXO Nº3"
+            titulo2="DECLARACIÓN JURADA DE CUMPLIMIENTO DE LAS ESPECIFICACIONES TÉCNICAS
+"
+            titulo3=""
+          />
 
-        <div style={{ fontSize: "12px", paddingTop: "10px", paddingLeft: "40px", paddingRight: "50px", textAlign: "justify" }}>
-          <br></br>
+          <Dirigido
+            dirigido="COMITE DE SELECCION"
+            procesoEntidad={procesoEntidad}
+
+          />
+          <div style={{ textAlign: "justify" }}>
+            <br></br>
+            Es grato dirigirme a usted, para hacer de su conocimiento que luego de haber examinado las bases y
+            demás documentos del procedimiento de la referencia y, conociendo todos los alcances y las
+            condiciones detalladas en dichos documentos, el postor que suscribe ofrece el <b> {objetoConvocatoriaEntidad}</b> , de conformidad con las Especificaciones Técnicas que se indican
+            en el numeral 3.1 del Capítulo III de la sección específica de las bases y los documentos del
+            procedimiento.
+
+            <br></br> <br></br>
+          </div>
+
+          <div style={{ fontSize: "12px", paddingTop: "10px", paddingLeft: "40px", paddingRight: "50px", textAlign: "justify" }}>
+            <br></br>
 
 
 
-          <br></br> <br></br>
-        </div>
-        <div>{fecha1}
-          <br></br> <br></br>
+            <br></br> <br></br>
+          </div>
+          <div>{fecha1}
+            <br></br> <br></br>
 
-        </div>
+          </div>
 
-        <FirmaGerente />
-      </Encabezado>
-      ):""}
+          <FirmaGerente />
+        </Encabezado>
+      ) : ""}
 
-   
+
 
       {subSubSeparador115Numero.length > 0 ? <SubSubSeparador
         nombreEmpresa1={nombreEmpresa1}
@@ -1024,50 +1277,50 @@ color:blue;
 
       {/*hoja 04############# anex0 04################################# */}
 
-      {subSubSeparador115Numero.length > 0 ?(
-              <Encabezado
-        nombreEmpresa1={nombreEmpresa1}
-        procesoEntidad={procesoEntidad}
-      >
-
-        <Titulos
-
-          titulo1="ANEXO Nº4"
-          titulo2="DECLARACIÓN JURADA DE PLAZO DE ENTREGA"
-          titulo3=""
-        />
-
-        <Dirigido
-          dirigido="COMITE DE SELECCION"
+      {subSubSeparador115Numero.length > 0 ? (
+        <Encabezado
+          nombreEmpresa1={nombreEmpresa1}
           procesoEntidad={procesoEntidad}
+        >
 
-        />
-        <div style={{ textAlign: "justify" }}>
-          <br></br>
-          Mediante el presente, con pleno conocimiento de las condiciones que se exigen en las bases del
-          procedimiento de la referencia, me comprometo a entregar los bienes objeto del presente procedimiento
-          de selección <b> {objetoConvocatoriaEntidad}</b> en el plazo de<b> {plazoEjecucion} </b>, CONTADOS A PARTIR DEL DIA SIGUIENTE DE
-          PERFECCIONADO EL CONTRATO.
+          <Titulos
+
+            titulo1="ANEXO Nº4"
+            titulo2="DECLARACIÓN JURADA DE PLAZO DE ENTREGA"
+            titulo3=""
+          />
+
+          <Dirigido
+            dirigido="COMITE DE SELECCION"
+            procesoEntidad={procesoEntidad}
+
+          />
+          <div style={{ textAlign: "justify" }}>
+            <br></br>
+            Mediante el presente, con pleno conocimiento de las condiciones que se exigen en las bases del
+            procedimiento de la referencia, me comprometo a entregar los bienes objeto del presente procedimiento
+            de selección <b> {objetoConvocatoriaEntidad}</b> en el plazo de<b> {plazoEjecucion} </b>, CONTADOS A PARTIR DEL DIA SIGUIENTE DE
+            PERFECCIONADO EL CONTRATO.
 
 
-          <br></br> <br></br>
-        </div>
+            <br></br> <br></br>
+          </div>
 
-        <div style={{ fontSize: "12px", paddingTop: "10px", paddingLeft: "40px", paddingRight: "50px", textAlign: "justify" }}>
-          <br></br>
+          <div style={{ fontSize: "12px", paddingTop: "10px", paddingLeft: "40px", paddingRight: "50px", textAlign: "justify" }}>
+            <br></br>
 
 
 
-          <br></br> <br></br>
-        </div>
-        <div>{fecha1}
-          <br></br> <br></br>
+            <br></br> <br></br>
+          </div>
+          <div>{fecha1}
+            <br></br> <br></br>
 
-        </div>
+          </div>
 
-        <FirmaGerente />
-      </Encabezado>
-      ):""}
+          <FirmaGerente />
+        </Encabezado>
+      ) : ""}
 
 
       {subSeparador12Numero.length > 0 ? <SubSeparador
@@ -1079,6 +1332,55 @@ color:blue;
 
       /> : ""}
 
+
+      {/*hoja 10############# anexo 10################################# */}
+
+      {subSeparador12Numero.length > 0 ? (
+        <Encabezado
+          nombreEmpresa1={nombreEmpresa1}
+          procesoEntidad={procesoEntidad}
+        >
+          <div style={{ fontSize: "14px" }}>
+            <Titulos
+
+              titulo1="ANEXO Nº10"
+              titulo2="SOLICITUD DE BONIFICACIÓN DEL CINCO POR CIENTO (5%) POR TENER LA CONDICIÓN DE "
+              titulo3="MICRO Y PEQUEÑA EMPRESA "
+            />
+          </div>
+
+
+          <div>       <br></br> <br></br></div>
+          <Dirigido
+            dirigido="COMITE DE SELECCION"
+            procesoEntidad={procesoEntidad}
+
+          />
+          <div style={{ textAlign: "justify" }}>
+            <br></br>
+            Mediante el presente el suscrito, postor y/o Representante legal<b> {representanteLegalEmpresa1} </b> , solicito la asignación de la bonificación del cinco por ciento (5%) sobre el
+            puntaje total obtenido, debido a que mi representada cuenta con la condición de micro y pequeña
+            empresa.
+            <br></br> <br></br>
+          </div>
+
+
+
+          <div style={{ fontSize: "12px", paddingTop: "10px", paddingLeft: "40px", paddingRight: "50px", textAlign: "justify" }}>
+            <br></br>
+
+
+
+            <br></br> <br></br>
+          </div>
+          <div>{fecha1}
+            <br></br> <br></br>
+
+          </div>
+
+          <FirmaGerente />
+        </Encabezado>
+      ) : ""}
 
       {separador2Numero.length > 0 ? <Separador
         nombreEmpresa1={nombreEmpresa1}
@@ -1099,93 +1401,100 @@ color:blue;
       /> : ""}
 
 
-
+      {subSubSeparador211Numero.length > 0 ? <SubSubSeparador
+        nombreEmpresa1={nombreEmpresa1}
+        procesoEntidad={procesoEntidad}
+        objetoConvocatoriaEntidad={objetoConvocatoriaEntidad}
+        tituloNumero={subSubSeparador211Numero}
+        tituloTexto={subSubSeparador211Texto}
+      /> : ""}
 
       {/*hoja 06############# anex0 06################################# */}
 
-      <Encabezado
-        nombreEmpresa1={nombreEmpresa1}
-        procesoEntidad={procesoEntidad}
-      >
-
-        <Titulos
-
-          titulo1="ANEXO Nº6"
-          titulo2="PRECIO DE LA OFERTA"
-          titulo3=""
-        />
-
-        <Dirigido
-          dirigido="COMITE DE SELECCION"
+      {subSeparador21Numero.length > 0 ? (
+        <Encabezado
+          nombreEmpresa1={nombreEmpresa1}
           procesoEntidad={procesoEntidad}
+        >
 
-        />
-        <div style={{ textAlign: "justify" }}>
-          <br></br>
-          Es grato dirigirme a usted, para hacer de su conocimiento que, de acuerdo con las bases, mi oferta es
-          la siguiente:
+          <Titulos
 
+            titulo1="ANEXO Nº6"
+            titulo2="PRECIO DE LA OFERTA"
+            titulo3=""
+          />
 
+          <Dirigido
+            dirigido="COMITE DE SELECCION"
+            procesoEntidad={procesoEntidad}
 
-          <br></br> <br></br>
-        </div>
-
-        <table style={{ width: "100%" }}>
-          <tbody>
-            <tr style={{ boxShadow: "inset 5px 5px 30px 5px rgba(64, 8, 221, 0.7" }}>
-              <th style={{ width: "70%" }} >CONCEPTO</th>
-              <th>PRECIO TOTAL</th>
-            </tr>
-            <tr>
-
-              <td style={{ fontSize: "12px" }}> {objetoConvocatoriaEntidad} </td>
-              <td> {montoObra + ".00"}</td>
-            </tr>
-
-            <tr>
-
-              <td> <b>TOTAL </b></td>
-              <td ><b>S/. {montoObra + ".00"}</b> </td>
-            </tr>
-            <tr>
-
-              <td colSpan="2"> <b>{numeroLetras} y /100 soles</b> </td>
-              <td colSpan="0" ><b></b> </td>
-            </tr>
-          </tbody>
-
-        </table>
-
-
-        <div style={{ textAlign: "justify" }}>
-          <br></br>
-          El precio de la oferta es  <b>{numeroLetras} y /100,  {ofertaSoles}</b> incluye todos los tributos,
-          seguros, transporte, inspecciones, pruebas y, de ser el caso, los costos laborales conforme a la
-          legislación vigente, así como cualquier otro concepto que pueda tener incidencia sobre el costo del
-          bien a contratar; excepto la de aquellos postores que gocen de alguna exoneración legal, no incluirán
-          en el precio de su oferta los tributos respectivos.
-
-
-          <br></br>
-        </div>
-
-
-        <div style={{ fontSize: "12px", paddingTop: "10px", paddingLeft: "40px", paddingRight: "50px", textAlign: "justify" }}>
-          <br></br>
+          />
+          <div style={{ textAlign: "justify" }}>
+            <br></br>
+            Es grato dirigirme a usted, para hacer de su conocimiento que, de acuerdo con las bases, mi oferta es
+            la siguiente:
 
 
 
-          <br></br>
-        </div>
-        <div>{fecha1}
-          <br></br>
+            <br></br> <br></br>
+          </div>
 
-        </div>
+          <table style={{ width: "100%" }}>
+            <tbody>
+              <tr style={{ boxShadow: "inset 5px 5px 30px 5px rgba(64, 8, 221, 0.7" }}>
+                <th style={{ width: "70%" }} >CONCEPTO</th>
+                <th>PRECIO TOTAL</th>
+              </tr>
+              <tr>
 
-        <FirmaGerente />
+                <td style={{ fontSize: "12px" }}> {objetoConvocatoriaEntidad} </td>
+                <td> {montoObra + ".00"}</td>
+              </tr>
+
+              <tr>
+
+                <td> <b>TOTAL </b></td>
+                <td ><b>S/. {montoObra + ".00"}</b> </td>
+              </tr>
+              <tr>
+
+                <td colSpan="2"> <b>{numeroLetras} y /100 soles</b> </td>
+                <td colSpan="0" ><b></b> </td>
+              </tr>
+            </tbody>
+
+          </table>
 
 
-        <style jsx>{`
+          <div style={{ textAlign: "justify" }}>
+            <br></br>
+            El precio de la oferta es  <b>{numeroLetras} y /100,  {ofertaSoles}</b> incluye todos los tributos,
+            seguros, transporte, inspecciones, pruebas y, de ser el caso, los costos laborales conforme a la
+            legislación vigente, así como cualquier otro concepto que pueda tener incidencia sobre el costo del
+            bien a contratar; excepto la de aquellos postores que gocen de alguna exoneración legal, no incluirán
+            en el precio de su oferta los tributos respectivos.
+
+
+            <br></br>
+          </div>
+
+
+          <div style={{ fontSize: "12px", paddingTop: "10px", paddingLeft: "40px", paddingRight: "50px", textAlign: "justify" }}>
+            <br></br>
+
+
+
+            <br></br>
+          </div>
+          <div>{fecha1}
+            <br></br>
+
+          </div>
+
+          <FirmaGerente />
+
+
+          <style jsx>{`
 table,th,td{
   border:1px solid black;
   border-collapse:collapse;
@@ -1196,7 +1505,9 @@ th,td{
 }
 
 `}</style>
-      </Encabezado>
+        </Encabezado>
+      ) : ""}
+
 
       {subSeparador22Numero.length > 0 ? <SubSeparador
         nombreEmpresa1={nombreEmpresa1}
@@ -1208,97 +1519,6 @@ th,td{
       /> : ""}
 
 
-      {/*hoja 09############# anexo 09################################# */}
-
-      <Encabezado
-        nombreEmpresa1={nombreEmpresa1}
-        procesoEntidad={procesoEntidad}
-      >
-
-        <Titulos
-
-          titulo1="ANEXO Nº9"
-          titulo2="DECLARACION JURADA"
-          titulo3="(NUMERAL 49.4 DEL ARTÍCULO 49 DEL REGLAMENTO) "
-        />
-        <div>       <br></br> <br></br></div>
-        <Dirigido
-          dirigido="COMITE DE SELECCION"
-          procesoEntidad={procesoEntidad}
-
-        />
-        <div style={{ textAlign: "justify" }}>
-          <br></br>
-          Mediante el presente el suscrito, postor y/o Representante Legal de <b> {representanteLegalEmpresa1} </b>, declaro que la experiencia que acredito de la empresa <b> {nombreEmpresa1} </b> como consecuencia de una reorganización societaria,
-          no se encuentra en el supuesto establecido en el numeral 49.4 del artículo 49 del Reglamento.
-
-          <br></br> <br></br>
-        </div>
-
-
-
-        <div style={{ fontSize: "12px", paddingTop: "10px", paddingLeft: "40px", paddingRight: "50px", textAlign: "justify" }}>
-          <br></br>
-
-
-
-          <br></br> <br></br>
-        </div>
-        <div>{fecha1}
-          <br></br> <br></br>
-
-        </div>
-
-        <FirmaGerente />
-      </Encabezado>
-
-
-      {/*hoja 10############# anexo 10################################# */}
-
-      <Encabezado
-        nombreEmpresa1={nombreEmpresa1}
-        procesoEntidad={procesoEntidad}
-      >
-        <div style={{ fontSize: "14px" }}>
-          <Titulos
-
-            titulo1="ANEXO Nº10"
-            titulo2="SOLICITUD DE BONIFICACIÓN DEL CINCO POR CIENTO (5%) POR TENER LA CONDICIÓN DE "
-            titulo3="MICRO Y PEQUEÑA EMPRESA "
-          />
-        </div>
-
-
-        <div>       <br></br> <br></br></div>
-        <Dirigido
-          dirigido="COMITE DE SELECCION"
-          procesoEntidad={procesoEntidad}
-
-        />
-        <div style={{ textAlign: "justify" }}>
-          <br></br>
-          Mediante el presente el suscrito, postor y/o Representante legal<b> {representanteLegalEmpresa1} </b> , solicito la asignación de la bonificación del cinco por ciento (5%) sobre el
-          puntaje total obtenido, debido a que mi representada cuenta con la condición de micro y pequeña
-          empresa.
-          <br></br> <br></br>
-        </div>
-
-
-
-        <div style={{ fontSize: "12px", paddingTop: "10px", paddingLeft: "40px", paddingRight: "50px", textAlign: "justify" }}>
-          <br></br>
-
-
-
-          <br></br> <br></br>
-        </div>
-        <div>{fecha1}
-          <br></br> <br></br>
-
-        </div>
-
-        <FirmaGerente />
-      </Encabezado>
 
       {subSeparador23Numero.length > 0 ? <SubSeparador
         nombreEmpresa1={nombreEmpresa1}
@@ -1308,6 +1528,56 @@ th,td{
         tituloTexto={subSeparador23Texto}
 
       /> : ""}
+
+
+      {/*hoja 09############# anexo 09################################# */}
+
+
+      {subSeparador23Numero.length > 0 ? (
+        <Encabezado
+          nombreEmpresa1={nombreEmpresa1}
+          procesoEntidad={procesoEntidad}
+        >
+
+          <Titulos
+
+            titulo1="ANEXO Nº9"
+            titulo2="DECLARACION JURADA"
+            titulo3="(NUMERAL 49.4 DEL ARTÍCULO 49 DEL REGLAMENTO) "
+          />
+          <div>       <br></br> <br></br></div>
+          <Dirigido
+            dirigido="COMITE DE SELECCION"
+            procesoEntidad={procesoEntidad}
+
+          />
+          <div style={{ textAlign: "justify" }}>
+            <br></br>
+            Mediante el presente el suscrito, postor y/o Representante Legal de <b> {representanteLegalEmpresa1} </b>, declaro que la experiencia que acredito de la empresa <b> {nombreEmpresa1} </b> como consecuencia de una reorganización societaria,
+            no se encuentra en el supuesto establecido en el numeral 49.4 del artículo 49 del Reglamento.
+
+            <br></br> <br></br>
+          </div>
+
+
+
+          <div style={{ fontSize: "12px", paddingTop: "10px", paddingLeft: "40px", paddingRight: "50px", textAlign: "justify" }}>
+            <br></br>
+
+
+
+            <br></br> <br></br>
+          </div>
+          <div>{fecha1}
+            <br></br> <br></br>
+
+          </div>
+
+          <FirmaGerente />
+        </Encabezado>
+
+      ) : ""}
+
 
       {subSeparador24Numero.length > 0 ? <SubSeparador
         nombreEmpresa1={nombreEmpresa1}
@@ -1327,32 +1597,34 @@ th,td{
 
       /> : ""}
 
-
-      <CuartoSeparador
+      {cuartaSeparador2411Numero.length >0 ?      <CuartoSeparador
         nombreEmpresa1={nombreEmpresa1}
         procesoEntidad={procesoEntidad}
         objetoConvocatoriaEntidad={objetoConvocatoriaEntidad}
-        tituloNumero=""
-        tituloTexto="A.1 FORMACIÓN ACADÉMICA"
+        tituloNumero={cuartaSeparador2411Numero}
+        tituloTexto={cuartaSeparador2411Texto}
 
-      />
+      /> :""}
 
-      <CuartoSeparador
+      {cuartaSeparador2412Numero.length >0 ?       <CuartoSeparador
         nombreEmpresa1={nombreEmpresa1}
         procesoEntidad={procesoEntidad}
         objetoConvocatoriaEntidad={objetoConvocatoriaEntidad}
-        tituloNumero=""
-        tituloTexto="A.2 CAPACITACIÓN"
+        tituloNumero={cuartaSeparador2412Numero}
+        tituloTexto={cuartaSeparador2412Texto}
 
-      />
-      <CuartoSeparador
+      />:""}
+
+
+      {cuartaSeparador2412Numero.length > 0 ?      <CuartoSeparador
         nombreEmpresa1={nombreEmpresa1}
         procesoEntidad={procesoEntidad}
         objetoConvocatoriaEntidad={objetoConvocatoriaEntidad}
-        tituloNumero=""
-        tituloTexto="A.3.-EXPERIENCIA DEL PERSONAL CLAVE"
+        tituloNumero={cuartaSeparador2413Numero}
+        tituloTexto={cuartaSeparador2413Texto}
 
-      />
+      />  :""}
+
 
       {subSubSeparador242Numero.length > 0 ? <SubSubSeparador
         nombreEmpresa1={nombreEmpresa1}
@@ -1363,15 +1635,15 @@ th,td{
 
       /> : ""}
 
-
-      <Separador
+      {separador3Numero.length >0 ?     <Separador
         nombreEmpresa1={nombreEmpresa1}
         procesoEntidad={procesoEntidad}
         objetoConvocatoriaEntidad={objetoConvocatoriaEntidad}
-        tituloNumero="3."
-        tituloTexto="MEJORAS A LOS TERMINOS DE REFERENCIA"
+        tituloNumero={separador3Numero}
+        tituloTexto={separador3Texto}
         tituloSeparador2=""
-      />
+      /> :""}
+ 
 
 
     </>

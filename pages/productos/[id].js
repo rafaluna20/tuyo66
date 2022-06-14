@@ -9,6 +9,7 @@ import Error404 from '../../components/layout/404';
 import Modal from '../../components/comPasajero/Modal';
 
 import CajaPrimario from '../../components/comSimples/CajaPrimario';
+import Asiento from '../../components/comSimples/Asiento';
 
 
 
@@ -237,10 +238,10 @@ const Producto = () => {
                         <li
                           key={`${comentario.usuarioId}-${i}`}
                         >
-                          <button
-                            onClick={comprarPasaje}
-                            value={asiento}
-                          >asiento numero: {asiento} </button>
+                          <Asiento
+                            comprarPasaje={comprarPasaje}
+                            asiento={asiento}
+                          >asiento numero: {asiento} </Asiento>
                         </li>
 
 
