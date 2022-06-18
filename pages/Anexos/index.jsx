@@ -15,7 +15,7 @@ const domicilioEntidad = "CAL. PACHACUTEC NRO.1923 LA VICTORIA/ LAMBAYEQUE-CHICL
 
 /*datos del representante legal de entidad */
 const representanteLegalEntidad = "ROMERO ARO PERCY PABLO";
-const dniRLegalEntidad = "-------";
+const dniRLegalEntidad = "08613067";
 const emailRlegalEntidad = "a-administrativo@romerogruas.com.pe";
 const telefonoRLegalEntidad = "998 192 141";
 
@@ -48,7 +48,7 @@ const objetoConvocatoriaEntidad = "obra: CONSTRUCCION DE CERCO PERIMETRICO DE 34
 
 const fecha1 = "LIMA, 09 de junio de 2022"
 const plazoEjecucion = "90 DIAS CALENDARIOS "
-const montoObra = "160033"
+const montoObra = "260033"
 const ofertaSoles = " en soles"
 
 

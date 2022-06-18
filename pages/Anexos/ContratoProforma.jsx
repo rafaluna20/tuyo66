@@ -130,7 +130,7 @@ const ContratoProforma = (
           <b>  <u>CLAUSULA TERCERA: MONTO CONTRACTUAL</u> </b>
         </div>
         <div style={{ textAlign: "justify", fontSize: "14px" }}>
-          El monto total del presente contrato asciende a <b> {montoObra + ".00"} {ofertaSoles} ({numeroLetras} y/100 soles)</b> ,
+          El monto total del presente contrato asciende a <b> {montoObra + ".00"} {ofertaSoles} ({numeroLetras} con 00/100 soles)</b> ,
           sin IGV.   <br></br>
           Este monto comprende el costo del bien, seguros, transporte,
           asi como cualquier
@@ -314,8 +314,8 @@ const ContratoProforma = (
           la ejecución del presente contrato:
 
           <br></br>
-          DOMICILIO DE LA ENTIDAD: {domicilioEntidad}<br></br><br></br>
-          DOMICILIO DEL CONTRATISTA:{direccionEmpresa1}<br></br><br></br>
+          <b>DOMICILIO DE LA ENTIDAD: {domicilioEntidad}</b>      <br></br><br></br>
+          <b>DOMICILIO DEL CONTRATISTA:{direccionEmpresa1}</b>  <br></br><br></br>
 
           La variación del domicilio aquí declarado de alguna de las partes debe ser comunicada a la otra
           parte, formalmente y por escrito, con una anticipación no menor de quince (15) días calendario.
