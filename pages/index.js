@@ -19,6 +19,7 @@ export default function Home() {
   const navInferior = false
 
   return (
+    
     <div className={styles.container}>
       <Head>
         <title>tuyo express</title>
@@ -72,7 +73,7 @@ export default function Home() {
         </Layout>
       </div>
 
-
+      
 
       <footer className={styles.footer}>
         <a
