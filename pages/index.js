@@ -5,6 +5,7 @@ import Layout from '../components/layout/Layout'
 import FiltroNavegacion from '../components/comPasajero/FiltroNavegacion'
 
 import SalidaInterprovincialS from '../components/comPasajero/SalidaInterprovincialS'
+import AdministracionGastos from '../components/comPasajero/AdministracionGastos'
 
 
 import ResumenViajes from '../components/comPasajero/ResumenViajes'
@@ -41,7 +42,7 @@ export default function Home() {
             <div className={styles.InterprovincialLocal}>
 
               <SalidaInterprovincialS />
-              <SalidaInterprovincialS />
+              <AdministracionGastos />
             </div>
 
            <div className={styles.InterprovincialLocal}>

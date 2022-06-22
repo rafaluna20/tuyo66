@@ -1,3 +1,39 @@
+import React from 'react'
+import Link from 'next/link'
+
+
+const AdministracionGastos = () => {
+  return (
+    <div className="cajaSalidaInterprovincial">
+
+      <div className="tituloSalidaInterprovicial">
+       ADMINISTRACION
+      </div>
+
+
+
+      <div className="style3.salidaProvincia">
+        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
+
+          <Link href="/Presupuesto">
+            <a className="salidaProvincia01" > presupuesto
+            </a>
+          </Link>
+
+
+          <Link href="/Carga">
+            <a className= "salidaProvincia02" >
+              OTROS
+            </a>
+          </Link>
+        </div>
+
+      </div>
+
+
+
+      <style jsx>{`
+
 .cajaSalidaInterprovincial{
 
 width: 360px;
@@ -75,7 +111,12 @@ box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.7);
 
 }
 
+
+
+
 @media (max-width: 600px) {
+
+
 .cajaSalidaInterprovincial{
 
 width: 90%;
@@ -126,6 +167,14 @@ font-size: 12px;
 
 
 
-
-
 }
+
+`}</style>
+
+
+
+    </div>
+  )
+}
+
+export default AdministracionGastos
