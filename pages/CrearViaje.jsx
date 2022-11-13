@@ -1,5 +1,5 @@
-import React, { useState,useContext } from 'react'
-import Router,{useRouter} from 'next/router'
+import React, { useState, useContext } from 'react'
+import Router, { useRouter } from 'next/router'
 import FileUploader from "react-firebase-file-uploader"
 
 import Layout from '../components/layout/Layout'
@@ -7,7 +7,7 @@ import Layout from '../components/layout/Layout'
 import useValidacion from '../hooks/useValidacion'
 import validarCrearProducto from '../validacion/validarCrearProducto'
 
-import{FirebaseContext} from '../firebase'
+import { FirebaseContext } from '../firebase'
 
 
 const STATE_INICIAL = {
@@ -25,50 +25,51 @@ const CrearViaje = () => {
   const [subiendo, guardarSubiendo] = useState(false);
   const [progreso, guardarProgreso] = useState(0);
   const [urlimagen, guardarUrlImagen] = useState('');
-//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+  //mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
   const [error, guardarError] = useState(false);
   const { valores, errores, handleSubmit, handleChange, handleBlur } = useValidacion(STATE_INICIAL, validarCrearProducto, crearProducto)
   const { nombre, empresa, imagen, url, descripcion } = valores;
-//hook de router para redirecionar
+  //hook de router para redirecionar
 
-const router=useRouter();
+  const router = useRouter();
 
 
-//contrxt con las operaciones de CRUD firebase
+  //contrxt con las operaciones de CRUD firebase
 
-  const {firebase,usuario} = useContext(FirebaseContext)
+  const { firebase, usuario } = useContext(FirebaseContext)
 
   async function crearProducto() {
     //si el usuario no  esta autentificado llevar a login
-    if(!usuario){
+    if (!usuario) {
       return router.push("/Login");
     }
 
     //crear el objeto de nuevo producto
-    
-    const producto={
-      nombre:nombre,
-      empresa:empresa,
-      url:url,
-      urlimagen: urlimagen,
-      descripcion:descripcion,
-      votos:0,
-      comentarios:[],
-      creado:Date.now(),
-      creador:{
-        id:usuario.uid,
-        nombre:usuario.displayName
-      },
-      haVotado:[],
-      asientosVendidos:[],
-    }
-//insertando en una base datos
 
-firebase.db.collection("productos").add(producto)
+    const producto = {
+      nombre: nombre,
+      empresa: empresa,
+      url: url,
+      urlimagen: urlimagen,
+      descripcion: descripcion,
+      votos: 0,
+      comentarios: [],
+      creado: Date.now(),
+      creador: {
+        id: usuario.uid,
+        nombre: usuario.displayName
+      },
+      haVotado: [],
+      asientosVendidos: [],
+      asientos: [1, 2, 3, 4, 5, 6, 7, 8]
+    }
+    //insertando en una base datos
+
+    firebase.db.collection("productos").add(producto)
     return router.push('/');
   }
-//funciones para manipular imagen
+    //funciones para manipular imagen
 
 
   const handleUploadStart = () => {
@@ -157,13 +158,13 @@ firebase.db.collection("productos").add(producto)
 
 
 
-             
+
                 <div className='LabelInput'>
                   <label htmlFor="imagen">Imagen</label>
 
                   <FileUploader
-                  accept="image/*"
-                
+                    accept="image/*"
+
                     id="imagen"
 
                     name="imagen"

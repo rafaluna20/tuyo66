@@ -6,11 +6,14 @@ import { FirebaseContext } from '../../firebase';
 import Layout from '../../components/layout/Layout';
 import Error404 from '../../components/layout/404';
 
+import Modal from '../../components/comPasajero/Modal';
+
 
 
 
 const Producto = () => {
 
+  const [modal, setmodal] = useState(false)
   // state del componente
   const [producto, guardarProducto] = useState({});
   const [error, guardarError] = useState(false);
@@ -42,39 +45,35 @@ const Producto = () => {
   }, [id]);
 
   if (Object.keys(producto).length === 0 && !error) return 'Cargando...';
+  console.log(router)
+  console.log(producto)
 
-  const { comentarios, creado, descripcion, empresa, nombre, url, urlimagen, votos, creador, haVotado } = producto;
-
-  // Administrar y validar los votos
+  const { comentarios, creado, descripcion, empresa, nombre, url, urlimagen, votos, creador, haVotado, asientos, asientosVendidos } = producto;
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+  // Administrar y validar los votos 
   const votarProducto = () => {
     if (!usuario) {
       return router.push('/login')
     }
-
-    // obtener y sumar un nuevo voto
+   // obtener y sumar un nuevo voto
     const nuevoTotal = votos + 1;
-
     // Verificar si el usuario actual ha votado
     if (haVotado.includes(usuario.uid)) return;
-
     // guardar el ID del usuario que ha votado
     const nuevoHaVotado = [...haVotado, usuario.uid];
-
     //  Actualizar en la BD
     firebase.db.collection('productos').doc(id).update({
       votos: nuevoTotal,
       haVotado: nuevoHaVotado
     })
-
     // Actualizar el state
     guardarProducto({
       ...producto,
       votos: nuevoTotal
     })
-
     guardarConsultarDB(true); // hay un voto, por lo tanto consultar a la BD
   }
-
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
   // Funciones para crear comentarios
   const comentarioChange = e => {
     guardarComentario({
@@ -117,7 +116,7 @@ const Producto = () => {
 
     guardarConsultarDB(true); // hay un COMENTARIO, por lo tanto consultar a la BD
   }
-
+//mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
   // función que revisa que el creador del producto sea el mismo que esta autenticado
   const puedeBorrar = () => {
     if (!usuario) return false;
@@ -145,6 +144,13 @@ const Producto = () => {
       console.log(error);
     }
   }
+//..mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+  //funcion para comprar pasaje.
+  const comprarPasaje = () => {
+    setmodal(true)
+    console.log("diste click para comprar pasaje")
+  }
+
 
   return (
     <Layout>
@@ -163,6 +169,7 @@ const Producto = () => {
                 {usuario && (
                   <>
                     <h2>Agrega tu comentario</h2>
+
                     <form
                       onSubmit={agregarComentario}
                     >
@@ -181,14 +188,15 @@ const Producto = () => {
                   </>
                 )}
 
+
                 <h2>Comentarios</h2>
 
                 {comentarios.length === 0 ? "Aún no hay comentarios" : (
-                  <ul>
+                  <ul className='cajaComentario'>
                     {comentarios.map((comentario, i) => (
                       <li
                         key={`${comentario.usuarioId}-${i}`}
-                        >
+                      >
                         <p>{comentario.mensaje}</p>
                         <p>Escrito por:
                           <span >
@@ -200,6 +208,30 @@ const Producto = () => {
                     ))}
                   </ul>
                 )}
+                {/* secion de asientos  mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/}
+                <h2>ASIENTOS</h2>
+
+                {asientos.length === 0 ? "Aún no hay asientos vendidos" : (
+                  <ul className='cajaAsiento'
+
+                  >
+                    {asientos.map((asiento, i) => (
+                      <li
+                        key={`${comentario.usuarioId}-${i}`}
+                      >
+                        <button
+                          onClick={comprarPasaje}
+                          value={asiento}
+                        >asiento numero: {asiento} </button>
+
+
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {/* termina la secion de asientos    mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/}
+
+
 
               </div>
 
@@ -229,11 +261,52 @@ const Producto = () => {
                 onClick={eliminarProducto}
               >Eliminar Producto</button>
             }
+
+            {/* inicio desde modalmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm */}
+            {modal && <Modal 
+            firebase={firebase}
+            producto={producto}
+            usuario={usuario}
+            setmodal={setmodal}
+              guardarProducto={guardarProducto}
+              id={id}
+
+
+            />}
+
+            {/* fin  d pantalla modal   mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/}
           </div>
         )}
 
 
       </>
+      <style jsx>{`
+      .cajaComentario{
+
+  background-color: var(--negro-oscuro1);
+
+      }
+
+         .cajaAsiento{
+
+  background-color: #e1e1e1;
+
+      }   
+
+
+
+@media (max-width: 600px) {
+
+
+
+}
+
+
+
+
+
+`}</style>
+
     </Layout>
   );
 }
