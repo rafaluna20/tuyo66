@@ -48,7 +48,6 @@ return
             <div className='cajaTitulo'>CREAR CUENTA</div>
 
             <form
-
               onSubmit={handleSubmit}
             >
               {errores.nombre && <div style={{ color: "red", background: "black", textAlign: "center" }}>{errores.nombre}</div>}

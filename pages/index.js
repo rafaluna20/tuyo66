@@ -16,10 +16,10 @@ import DestinosMio from '../components/comPasajero/DestinosMio'
 
 export default function Home() {
 
-  const navInferior = false
+  const navInferior = false;
 
   return (
-    
+
     <div className={styles.container}>
       <Head>
         <title>tuyo express</title>
@@ -40,26 +40,40 @@ export default function Home() {
 
             <div className={styles.InterprovincialLocal}>
 
-              <SalidaInterprovincialS />
-              <SalidaInterprovincialS />
+              <SalidaInterprovincialS
+                titulo="SALIDAS INTERPROVINCIALES"
+                url1="/Pasajeros/ListaCarros"
+                nombre1="PASAJEROS"
+                url2="/Carga"
+                nombre2="CARGA ENCOMIENDA"
+              />
+              <SalidaInterprovincialS
+                titulo="GENERAR DOCUMENTOS"
+                url1="/documentos"
+                nombre1="GENERAR"
+                url2="/documentos"
+                nombre2="DOCUMENTO"
+              />
+
+
             </div>
 
-           <div className={styles.InterprovincialLocal}>
+            <div className={styles.InterprovincialLocal}>
 
-              <DestinosMio/>
+              <DestinosMio />
               <DestinosMio />
 
-            </div>   
+            </div>
 
             <div className={styles.InterprovincialLocal}>
 
               <SalidaLocal />
 
             </div>
- 
+
             <div className={styles.InterprovincialLocal}>
 
-              <RutasV 
+              <RutasV
                 origen="huancavelica"
                 destino="cuzco"
               />
@@ -73,7 +87,17 @@ export default function Home() {
         </Layout>
       </div>
 
-      
+      <div>
+
+        <Image
+
+          src="/img/logoTuyo.svg"
+          alt="Picture of the author"
+          width={40}
+          height={40}
+          priority
+        />
+      </div>
 
       <footer className={styles.footer}>
         <a

@@ -223,13 +223,14 @@ const CrearViaje = () => {
                 <input
                   className='cajaCrearCuenta'
                   type="submit"
-                  value="CREAR VIAJE" />
+                  value="CREAR VIAJE"/>
               </div>
               {error && <div style={{ color: "red", background: "black", textAlign: "center" }}>{error}</div>}
 
 
 
             </form>
+            
           </div>
         </div>
       </div>

@@ -139,7 +139,7 @@ const Producto = () => {
 
     try {
       await firebase.db.collection('productos').doc(id).delete();
-      router.push('/')
+      router.push('/Pasajeros/ListaCarros')
     } catch (error) {
       console.log(error);
     }

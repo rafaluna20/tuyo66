@@ -2,12 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 import style3 from '../../styles/styleComPasajero/SalidaInterprovincialS.module.css'
 
-const SalidaInterprovincial = () => {
+const SalidaInterprovincial = ({ titulo, url1, nombre1, url2, nombre2 }) => {
   return (
     <div className={style3.cajaSalidaInterprovincial}>
 
       <div className={style3.tituloSalidaInterprovicial}>
-      SALIDAS INTERPROVINCIALES
+        {titulo}
       </div>
 
 
@@ -15,15 +15,15 @@ const SalidaInterprovincial = () => {
       <div className={style3.salidaProvincia}>
         <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
 
-          <Link href="/Pasajeros/ListaCarros">
-            <a className={style3.salidaProvincia01} >PASAJEROS
+          <Link href={url1}>
+            <a className={style3.salidaProvincia01} >{nombre1}
             </a>
           </Link>
-     
 
-          <Link href="/Carga">
+
+          <Link href={url2}>
             <a className={style3.salidaProvincia02} >
-              CARGA ENCOMIENDA
+              {nombre2}
             </a>
           </Link>
         </div>

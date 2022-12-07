@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
+
 import Link from 'next/link';
 import Image from 'next/image';
+
 import stilos from '../../styles/stylelayout/Header.module.css'
 
 import { FirebaseContext } from '../../firebase';
 
-import { useState,useContext } from 'react';
+
 
 
 const Header = () => {
