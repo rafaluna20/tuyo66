@@ -5,11 +5,9 @@
   margin: 0 auto;
   padding: 0 10px;
 
-
-
-
-
 }
+
+
 
 .InterprovincialLocal{
 
@@ -46,4 +44,8 @@ flex-wrap: wrap;
     color: rgb(139, 139, 139);
 
 }
+}
+
+.prueba{
+  background-color: rgb(165, 253, 167);
 }

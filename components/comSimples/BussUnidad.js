@@ -118,7 +118,7 @@ margin: 5px 10px 5px 10px;
   border: solid 0.5px rgb(114, 114, 114);
   padding: 5px;
   width: 450px;
-  height: 170px;
+  height: 200px;
 
    display:grid;
    grid-template-columns: 2.5fr 1fr;

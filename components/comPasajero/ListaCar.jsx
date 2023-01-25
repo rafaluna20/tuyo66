@@ -16,6 +16,7 @@ const ListaCar = () => {
     obtenerProductos();
   }, []);
 
+
   function manejarSnapshot(snapshot) {
     const productos = snapshot.docs.map(doc => {
       return {
@@ -23,7 +24,6 @@ const ListaCar = () => {
         ...doc.data()
       }
     })
-
     guardarProductos(productos);
   }
 

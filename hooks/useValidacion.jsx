@@ -27,6 +27,7 @@ const useValidacion = (stateInicial, validar, fn) => {
 
     // Función que se ejecuta cuando el usuario hace submit
     const handleSubmit = e => {
+        
         e.preventDefault();
         const erroresValidacion = validar(valores);
         guardarErrores(erroresValidacion);
