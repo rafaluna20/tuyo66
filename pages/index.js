@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Layout from '../components/layout/Layout'
 import FiltroNavegacion from '../components/comPasajero/FiltroNavegacion'
+import Slider from '../components/Slider/Slider'
 
 import SalidaInterprovincialS from '../components/comPasajero/SalidaInterprovincialS'
 
@@ -34,6 +35,9 @@ export default function Home() {
 
         <Layout>
           <div className={styles.cajaFondo1}>
+
+
+            <Slider />
 
             <FiltroNavegacion />
             <ResumenViajes />
